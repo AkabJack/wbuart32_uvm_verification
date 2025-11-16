@@ -1,0 +1,4 @@
+../rtl/rxuart.v
+../rtl/txuart.v
+../rtl/ufifo.v
+../rtl/wbuart.v

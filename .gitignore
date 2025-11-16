@@ -1,0 +1,4 @@
+# Ignore Verilator build artifacts and generated dumps
+sim/obj_dir/
+sim/V*
+sim/*.vcd
