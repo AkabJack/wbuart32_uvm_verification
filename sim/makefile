@@ -2,7 +2,7 @@
 SHELL := /bin/bash
 
 VERILATOR = verilator
-TOP = wbuart
+TOP = testbench
 BUILD_ROOT = ~/Documents/Proiecte_Verificare/wbuart32_uvm_verification/sim
 OBJ_DIR = $(BUILD_ROOT)/obj_dir
 RTL_DIR = ~/Documents/Proiecte_Verificare/wbuart32_uvm_verification/rtl

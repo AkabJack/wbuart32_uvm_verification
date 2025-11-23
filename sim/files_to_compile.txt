@@ -2,3 +2,6 @@
 ../rtl/txuart.v
 ../rtl/ufifo.v
 ../rtl/wbuart.v
+../src/uart_agent/uart_intrf.sv
+../src/wishbone_agent/wb_b4_intrf.sv
+../src/environment/testbench.sv
