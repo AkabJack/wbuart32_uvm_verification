@@ -28,5 +28,4 @@ interface wb_b4_intrf #(
     logic                          stall;
     logic                          ack;
     logic [DATA_OUTPUT_WIDTH:0]    o_data;
-    
 endinterface:wb_b4_intrf
