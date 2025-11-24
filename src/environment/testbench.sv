@@ -4,7 +4,8 @@
 // Autor           : Nistor Ciprian Alexandru
 // Data            : 23.11.2024
 //------------------------------------------------------------------------------
-// Description     : Testbench for referencing the DUT
+// Description     : Testbench for referencing the DUT and to connect to the 
+// verification environment 
 //------------------------------------------------------------------------------
 // Changes         :
 // 23.11.2024 (NCA): Initial commit
@@ -16,6 +17,7 @@
 module testbench;
   logic clk;
   logic rst_n;
+
   logic uart_rx_int;
   logic uart_tx_int;
   logic uart_rxfifo_int;
@@ -34,6 +36,7 @@ module testbench;
   uart_intrf    uart_ref_intrf (clk, rst_n);
   wb_b4_intrf   wb_intrf(clk, rst_n);
 
+  //DUT instance
   wbuart DUT(
     .i_clk             (clk),
     .i_reset           (~rst_n),
@@ -56,6 +59,6 @@ module testbench;
     .o_uart_txfifo_int (uart_txfifo_int)
   );
 
-  
+
 
 endmodule:testbench
