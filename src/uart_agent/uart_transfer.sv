@@ -12,6 +12,9 @@
 `ifndef __UART_TRANSFER_SV
 `define __UART_TRANSFER_SV
 
+import uvm_pkg::*;
+`include "uvm_macros.svh"
+
 class uart_transfer extends uvm_sequence_item;
 
 
@@ -23,7 +26,7 @@ class uart_transfer extends uvm_sequence_item;
         `uvm_field_int(width, UVM_ALL_ON)
     `uvm_object_utils_end
 
-    extern function new(string name);
+    extern function new(string name = "uart_transfer");
     //  Function: do_copy
     // extern function void do_copy(uvm_object rhs);
     //  Function: do_compare
@@ -39,7 +42,7 @@ class uart_transfer extends uvm_sequence_item;
     //  Function: do_unpack
     // extern function void do_unpack();
     
-endclass: uart_transfer
+endclass:uart_transfer
 
 
 /*----------------------------------------------------------------------------*/
@@ -51,7 +54,7 @@ endclass: uart_transfer
 /*----------------------------------------------------------------------------*/
 /*  Functions                                                                 */
 /*----------------------------------------------------------------------------*/
-function uart_transfer::new(string name);
+function uart_transfer::new(string name = "uart_transfer");
     super.new(name);
 endfunction:new
 

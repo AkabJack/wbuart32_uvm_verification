@@ -10,6 +10,11 @@
 // Changes         :
 // 23.11.2024 (NCA): Initial commit
 //------------------------------------------------------------------------------
+`ifndef __TESTBENCH_SV
+`define __TESTBENCH_SV
+
+`include "uvm_macros.svh"
+import uvm_pkg::*;
 
 `define DEF_ADDR_SIZE 32
 `define DEF_DATA_SIZE 32
@@ -29,7 +34,8 @@ module testbench;
 
   // Active-low reset, release after a few cycles
   initial begin
-    rst_n = 1'b0;
+    rst_n = 1'b1;
+    #10 rst_n = 1'b0;
     #20 rst_n = 1'b1;
   end
 
@@ -59,6 +65,12 @@ module testbench;
     .o_uart_txfifo_int (uart_txfifo_int)
   );
 
-
+  initial begin
+    uvm_config_db #(virtual interface uart_intrf)::set(null, "uvm_test_top.wb_uart_env.uart_agent.*", "v_intrf", uart_ref_intrf);
+    run_test();//start test
+  end
 
 endmodule:testbench
+
+
+`endif

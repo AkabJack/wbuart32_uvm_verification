@@ -10,8 +10,11 @@
 // 06.12.2024 (NCA): Initial commit
 //------------------------------------------------------------------------------
 
-``ifndef __UART_MONITOR_SV
+`ifndef __UART_MONITOR_SV
 `define __UART_MONITOR_SV
+
+import uvm_pkg::*;
+`include "uvm_macros.svh"
 
 class uart_monitor extends uvm_monitor;
 

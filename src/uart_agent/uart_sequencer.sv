@@ -13,6 +13,9 @@
 `ifndef __UART_SEQUENCER_SV
 `define __UART_SEQUENCER_SV
 
+import uvm_pkg::*;
+`include "uvm_macros.svh"
+
 class uart_sequencer extends uvm_sequencer;
 
     `uvm_component_utils(uart_sequencer)

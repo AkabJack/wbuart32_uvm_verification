@@ -1,23 +1,27 @@
-# Verilator Makefile for direct Verilog testbench simulation
+# Vivado Makefile for direct Verilog testbench simulation
 SHELL := /bin/bash
+export PATH := /usr/bin:$(PATH)
+export LIBRARY_PATH := /usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu
 
-VERILATOR = verilator
+VIVADO_BIN = /media/al3x/PapaBobby/VIVADO/2025.2/Vivado/bin
 TOP = testbench
 BUILD_ROOT := $(abspath .)
-OBJ_DIR = $(BUILD_ROOT)/obj_dir
-RTL_DIR = $(abspath ../rtl)
 FILE_LIST = files_to_compile.txt
-DUMP_FILE = dump.vcd
 
 .PHONY: all clean compile run
 
 all: clean compile run
 
 compile:
-	$(VERILATOR) --timing --trace --binary --build-jobs 8 -Mdir $(OBJ_DIR) -f $(FILE_LIST) --top-module $(TOP)
+	$(VIVADO_BIN)/xvlog -work work --sv \
+  		-L uvm \
+  		-f $(BUILD_ROOT)/$(FILE_LIST)
+	$(VIVADO_BIN)/xelab work.$(TOP) -L uvm --dpi_absolute --sv -d VIVADO --debug all
 run:
-	$(OBJ_DIR)/V$(TOP)
-	$(HOME)/surfer ./$(DUMP_FILE)
+	$(VIVADO_BIN)/xsim work.$(TOP) --R --testplusarg UVM_TESTNAME=base_test
+run_gui:
+	$(VIVADO_BIN)/xsim work.$(TOP) --g --testplusarg UVM_TESTNAME=base_test -gui
 clean:
-	rm -rf $(OBJ_DIR)
-	rm -f $(DUMP_FILE)
+	rm -rf xsim.dir
+	rm -rf .Xil
+	rm -f xelab* xsim* xvlog* *.wdb *.log

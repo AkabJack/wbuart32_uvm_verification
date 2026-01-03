@@ -5,3 +5,13 @@
 ../src/uart_agent/uart_intrf.sv
 ../src/wishbone_agent/wb_b4_intrf.sv
 ../src/environment/testbench.sv
+../src/environment/env_types.sv
+../src/uart_agent/uart_transfer.sv
+../src/uart_agent/uart_driver.sv
+../src/uart_agent/uart_sequencer.sv
+../src/uart_agent/uart_agent.sv
+../src/environment/uart_sequences.sv
+../src/environment/wb_uart_environment.sv
+../src/environment/virtual_sequencer.sv
+../src/environment/virtual_sequeces.sv
+../tests/base_test.sv
