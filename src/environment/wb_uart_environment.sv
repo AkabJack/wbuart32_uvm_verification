@@ -19,12 +19,12 @@ class wb_uart_environment extends uvm_env;
     `uvm_component_utils(wb_uart_environment);
 
     uart_agent      uart_ag;
-    //wishbone_agent  wb_ag;
+    wb_b4_agent     wb_ag;
 
     virtual function void build_phase(uvm_phase phase);
         super.build_phase(phase);
         uart_ag = uart_agent::type_id::create("uart_agent", this);
-    //    wb_ag   = wishbone_agent::type_id::create("wishbone_b4_agent", this);
+        wb_ag   = wb_b4_agent::type_id::create("wb_b4_agent", this);
     endfunction:build_phase
 
     virtual function void connect_phase(uvm_phase phase);

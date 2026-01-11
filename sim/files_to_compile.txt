@@ -10,7 +10,12 @@
 ../src/uart_agent/uart_driver.sv
 ../src/uart_agent/uart_sequencer.sv
 ../src/uart_agent/uart_agent.sv
+../src/wishbone_agent/wb_b4_transfer.sv
+../src/wishbone_agent/wb_b4_driver.sv
+../src/wishbone_agent/wb_b4_sequencer.sv
+../src/wishbone_agent/wb_b4_agent.sv
 ../src/environment/uart_sequences.sv
+../src/environment/wb_b4_sequences.sv
 ../src/environment/wb_uart_environment.sv
 ../src/environment/virtual_sequencer.sv
 ../src/environment/virtual_sequeces.sv

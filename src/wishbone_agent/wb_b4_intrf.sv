@@ -27,5 +27,5 @@ interface wb_b4_intrf #(
     logic [SEL_WIDTH-1:0]          sel;
     logic                          stall;
     logic                          ack;
-    logic [DATA_OUTPUT_WIDTH:0]    o_data;
+    logic [DATA_OUTPUT_WIDTH-1:0]    o_data;//fixed incorrect size
 endinterface:wb_b4_intrf

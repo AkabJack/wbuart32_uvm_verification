@@ -1,0 +1,1 @@
+open_wave_config wave_conf.wcfg

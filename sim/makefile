@@ -20,7 +20,7 @@ compile:
 run:
 	$(VIVADO_BIN)/xsim work.$(TOP) --R --testplusarg UVM_TESTNAME=base_test
 run_gui:
-	$(VIVADO_BIN)/xsim work.$(TOP) --g --testplusarg UVM_TESTNAME=base_test -gui
+	$(VIVADO_BIN)/xsim work.$(TOP) --g --testplusarg UVM_TESTNAME=base_test -gui -tclbatch $(BUILD_ROOT)/run_gui.tcl
 clean:
 	rm -rf xsim.dir
 	rm -rf .Xil
