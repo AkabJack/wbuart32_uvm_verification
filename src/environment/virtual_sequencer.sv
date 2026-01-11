@@ -2,13 +2,13 @@
 // Project         : wbuart_uvm_verification
 // Module          : virtual_sequencer.sv
 // Autor           : Nistor Ciprian Alexandru
-// Data            : 21.12.2024
+// Data            : 21.12.2025
 //------------------------------------------------------------------------------
 // Description     : Main virtual sequencer for instantiating the other 
 //                  sequencers, and for connecting the sequencers to the test
 //------------------------------------------------------------------------------
 // Changes         :
-// 21.12.2024 (NCA): Initial commit
+// 21.12.2025 (NCA): Initial commit
 //------------------------------------------------------------------------------
 
 `ifndef __VIRTUAL_SEQUENCER_SV

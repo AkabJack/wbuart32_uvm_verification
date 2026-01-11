@@ -2,12 +2,12 @@
 // Project         : wbuart_uvm_verification
 // Module          : uart_sequences.sv
 // Autor           : Nistor Ciprian Alexandru
-// Data            : 08.12.2024
+// Data            : 08.12.2025
 //------------------------------------------------------------------------------
 // Description     : Sequence library for the uart agent
 //------------------------------------------------------------------------------
 // Changes         :
-// 08.12.2024 (NCA): Initial commit
+// 08.12.2025 (NCA): Initial commit
 //------------------------------------------------------------------------------
 `ifndef __UART_SEQUENCES_SV
 `define __UART_SEQUENCES_SV

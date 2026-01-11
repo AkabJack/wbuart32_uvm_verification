@@ -2,12 +2,12 @@
 // Project         : wbuart_uvm_verification
 // Module          : env_types.sv
 // Autor           : Nistor Ciprian Alexandru
-// Data            : 06.12.2024
+// Data            : 06.12.2025
 //------------------------------------------------------------------------------
 // Description     : Types for the environment
 //------------------------------------------------------------------------------
 // Changes         :
-// 06.12.2024 (NCA): Initial commit
+// 06.12.2025 (NCA): Initial commit
 //------------------------------------------------------------------------------
 
 `ifndef __ENV_TYPES_SV

@@ -2,12 +2,12 @@
 // Project         : wbuart_uvm_verification
 // Module          : uart_agent.sv
 // Autor           : Nistor Ciprian Alexandru
-// Data            : 24.11.2024
+// Data            : 24.11.2025
 //------------------------------------------------------------------------------
 // Description     : Uart agent for sending uart transactions
 //------------------------------------------------------------------------------
 // Changes         :
-// 24.11.2024 (NCA): Initial commit
+// 24.11.2025 (NCA): Initial commit
 //------------------------------------------------------------------------------
 
 `ifndef __UART_AGENT_SV

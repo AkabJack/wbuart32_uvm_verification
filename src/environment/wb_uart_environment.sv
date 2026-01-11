@@ -2,12 +2,12 @@
 // Project         : wbuart_uvm_verification
 // Module          : wb_uart_environment.sv
 // Autor           : Nistor Ciprian Alexandru
-// Data            : 24.11.2024
+// Data            : 24.11.2025
 //------------------------------------------------------------------------------
 // Description     : Verification environment for instantiating the agents
 //------------------------------------------------------------------------------
 // Changes         :
-// 24.11.2024 (NCA): Initial commit
+// 24.11.2025 (NCA): Initial commit
 //------------------------------------------------------------------------------
 `ifndef __WB_UART_ENVIRONMENT_SV
 `define __WB_UART_ENVIRONMENT_SV

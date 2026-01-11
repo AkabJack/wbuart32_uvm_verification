@@ -2,12 +2,12 @@
 // Project         : wbuart_uvm_verification
 // Module          : uart_driver.sv
 // Autor           : Nistor Ciprian Alexandru
-// Data            : 02.12.2024
+// Data            : 02.12.2025
 //------------------------------------------------------------------------------
 // Description     : Uart driver for sending transactions through uart
 //------------------------------------------------------------------------------
 // Changes         :
-// 02.12.2024 (NCA): Initial commit
+// 02.12.2025 (NCA): Initial commit
 //------------------------------------------------------------------------------
 `ifndef __UART_DRIVER_SV
 `define __UART_DRIVER_SV
@@ -44,18 +44,17 @@ function void uart_driver::build_phase(uvm_phase phase);
            `uvm_info(get_full_name(), "Setting the default Baud Rate value of 9600", UVM_LOW)
             baud_rate = 9600;
         end
-endfunction: build_phase
+endfunction:build_phase
 
 task uart_driver::reset_phase(uvm_phase phase);
-        @(negedge v_intrf.rst_n);//assert the reset phase
-        //setup the signals values
-        //v_intrf.rx  <= 'b0;
-        v_intrf.tx  <= 'b1;//setting the line at high after reset
-        v_intrf.cts <= 'b0;
-        v_intrf.rts <= 'b0;
-        //reseting the clock signal
-        internal_clk_gen <= 'b0;
-        @(posedge v_intrf.rst_n);
+    @(posedge v_intrf.rst_p);//assert the reset phase
+    //setup the signals values
+    //v_intrf.rx  <= 'b0;
+    v_intrf.tx  <= 'b1;//setting the line at high after reset
+    v_intrf.rts <= 'b0;
+    //reseting the clock signal
+    internal_clk_gen <= 'b0;
+    @(negedge v_intrf.rst_p);
 endtask:reset_phase
 
 task uart_driver::main_phase(uvm_phase phase);
