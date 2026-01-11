@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="work.testbench.wdb" id="1">
+         <top_modules>
+            <top_module name="\$unit_rxuart_v_2448624771 " />
+            <top_module name="std" />
+            <top_module name="testbench" />
+            <top_module name="uvm_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="66.667 ns"></ZoomStartTime>
+      <ZoomEndTime time="466.667 ns"></ZoomEndTime>
+      <Cursor1Time time="400.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="158"></NameColumnWidth>
+      <ValueColumnWidth column_width="88"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wvobject type="group" fp_name="group7">
+      <obj_property name="label">UART_INTRF</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/testbench/uart_ref_intrf/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/uart_ref_intrf/rst_p">
+         <obj_property name="ElementShortName">rst_p</obj_property>
+         <obj_property name="ObjectShortName">rst_p</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/uart_ref_intrf/rx">
+         <obj_property name="ElementShortName">rx</obj_property>
+         <obj_property name="ObjectShortName">rx</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/uart_ref_intrf/tx">
+         <obj_property name="ElementShortName">tx</obj_property>
+         <obj_property name="ObjectShortName">tx</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/uart_ref_intrf/cts">
+         <obj_property name="ElementShortName">cts</obj_property>
+         <obj_property name="ObjectShortName">cts</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/uart_ref_intrf/rts">
+         <obj_property name="ElementShortName">rts</obj_property>
+         <obj_property name="ObjectShortName">rts</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/uart_ref_intrf/uart_clk">
+         <obj_property name="ElementShortName">uart_clk</obj_property>
+         <obj_property name="ObjectShortName">uart_clk</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group8">
+      <obj_property name="label">WB_INTRF</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/testbench/wb_intrf/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/wb_intrf/rst_p">
+         <obj_property name="ElementShortName">rst_p</obj_property>
+         <obj_property name="ObjectShortName">rst_p</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/wb_intrf/cyc">
+         <obj_property name="ElementShortName">cyc</obj_property>
+         <obj_property name="ObjectShortName">cyc</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/wb_intrf/stb">
+         <obj_property name="ElementShortName">stb</obj_property>
+         <obj_property name="ObjectShortName">stb</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/wb_intrf/we">
+         <obj_property name="ElementShortName">we</obj_property>
+         <obj_property name="ObjectShortName">we</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/wb_intrf/addr">
+         <obj_property name="ElementShortName">addr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/wb_intrf/i_data">
+         <obj_property name="ElementShortName">i_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">i_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/wb_intrf/sel">
+         <obj_property name="ElementShortName">sel[3:0]</obj_property>
+         <obj_property name="ObjectShortName">sel[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/wb_intrf/stall">
+         <obj_property name="ElementShortName">stall</obj_property>
+         <obj_property name="ObjectShortName">stall</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/wb_intrf/ack">
+         <obj_property name="ElementShortName">ack</obj_property>
+         <obj_property name="ObjectShortName">ack</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/wb_intrf/o_data">
+         <obj_property name="ElementShortName">o_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">o_data[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/uart_rx_int">
+      <obj_property name="ElementShortName">uart_rx_int</obj_property>
+      <obj_property name="ObjectShortName">uart_rx_int</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/uart_tx_int">
+      <obj_property name="ElementShortName">uart_tx_int</obj_property>
+      <obj_property name="ObjectShortName">uart_tx_int</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/uart_rxfifo_int">
+      <obj_property name="ElementShortName">uart_rxfifo_int</obj_property>
+      <obj_property name="ObjectShortName">uart_rxfifo_int</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/uart_txfifo_int">
+      <obj_property name="ElementShortName">uart_txfifo_int</obj_property>
+      <obj_property name="ObjectShortName">uart_txfifo_int</obj_property>
+   </wvobject>
+</wave_config>

@@ -27,8 +27,9 @@ class virtual_sequencer extends uvm_virtual_sequencer;
         super.new(name, parent);
     endfunction:new
 
-    uart_sequencer u_seq;
-    base_test base_test_pointer;
+    uart_sequencer  u_seq;
+    wb_b4_sequencer wb_seq;
+    base_test       base_test_pointer;
 
 endclass:virtual_sequencer
 
@@ -36,7 +37,8 @@ class v_sequence_base extends uvm_sequence;
     `uvm_object_utils(v_sequence_base)
     `uvm_declare_p_sequencer(virtual_sequencer)
 
-    uart_sequencer uart_p_sequencer;
+    uart_sequencer  uart_p_sequencer;
+    wb_b4_sequencer wb_p_sequencer;
 
     function new(string name="v_sequence_base");
         super.new(name);
@@ -44,6 +46,7 @@ class v_sequence_base extends uvm_sequence;
 
     virtual task body();
         uart_p_sequencer = p_sequencer.u_seq;
+        wb_p_sequencer   = p_sequencer.wb_seq;
     endtask:body
     
 endclass:v_sequence_base

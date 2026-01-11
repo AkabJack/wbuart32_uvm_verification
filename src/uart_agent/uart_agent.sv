@@ -21,7 +21,7 @@ class uart_agent extends uvm_agent;
 
     uart_driver     u_driver;
     uart_sequencer  u_sequencer;
-    //uart_monitor    monitor;
+    //uart_monitor    u_monitor;
 
     extern function         new(string name = "uart_agent", uvm_component parent);
     extern function void    build_phase(uvm_phase phase);

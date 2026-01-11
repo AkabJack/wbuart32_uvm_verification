@@ -25,12 +25,11 @@ class uart_base_sequence extends uvm_sequence;
         super.new(name);
     endfunction: new
 
-    extern virtual task body();
-endclass:uart_base_sequence
+    virtual task body();
+        `uvm_info(get_full_name(), "Base class for uart sequence", UVM_LOW)
+    endtask:body
 
-task uart_base_sequence::body();
-    `uvm_info(get_full_name(), "Base class for uart sequence", UVM_LOW)
-endtask:body
+endclass:uart_base_sequence
 
 class seq_send_data extends uart_base_sequence;
     rand uart_transfer t;

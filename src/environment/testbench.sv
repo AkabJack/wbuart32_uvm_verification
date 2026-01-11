@@ -29,14 +29,14 @@ module testbench;
   logic uart_txfifo_int;
 
   // 200 MHz clock: 5 ns period, toggle every 2.5 ns
-  initial clk = 1'b0;
+  initial clk = 1'b1;
   always #2.5 clk = ~clk;
 
   // Active-high reset, release after a few cycles
   initial begin
     rst_p = 1'b0;
     #10 rst_p = 1'b1;
-    #20rst_p = 1'b0;
+    #20 rst_p = 1'b0;
   end
 
   uart_intrf    uart_ref_intrf (clk, rst_p);
@@ -55,8 +55,8 @@ module testbench;
     .o_wb_stall        (wb_intrf.stall),
     .o_wb_ack          (wb_intrf.ack),
     .o_wb_data         (wb_intrf.o_data[31:0]),
-    .i_uart_rx         (uart_ref_intrf.rx),
-    .o_uart_tx         (uart_ref_intrf.tx),
+    .i_uart_rx         (uart_ref_intrf.tx),
+    .o_uart_tx         (uart_ref_intrf.rx),
     .i_cts_n           (uart_ref_intrf.cts),
     .o_rts_n           (uart_ref_intrf.rts),
     .o_uart_rx_int     (uart_rx_int),
@@ -67,6 +67,8 @@ module testbench;
 
   initial begin
     uvm_config_db #(virtual interface uart_intrf)::set(null, "uvm_test_top.wb_uart_env.uart_agent.*", "v_intrf", uart_ref_intrf);
+    uvm_config_db #(virtual interface wb_b4_intrf)::set(null, "uvm_test_top.wb_uart_env.wb_b4_agent.*", "v_intrf", wb_intrf);
+
     run_test();//start test
   end
 
