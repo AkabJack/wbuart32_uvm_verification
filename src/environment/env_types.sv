@@ -1,23 +1,23 @@
 //------------------------------------------------------------------------------
 // Project         : wbuart_uvm_verification
-// Module          : uart_intrf.sv
+// Module          : env_types.sv
 // Autor           : Nistor Ciprian Alexandru
-// Data            : 23.11.2025
+// Data            : 06.12.2025
 //------------------------------------------------------------------------------
-// Description     : Interface for the uart interface
+// Description     : Types for the environment
 //------------------------------------------------------------------------------
 // Changes         :
-// 23.11.2025 (NCA): Initial commit
+// 06.12.2025 (NCA): Initial commit
 //------------------------------------------------------------------------------
-`default_nettype wire
 
-interface uart_intrf(
-    input logic clk, 
-    input logic rst_p
-);
-    logic rx;
-    logic tx;
-    logic cts;
-    logic rts;
-    logic uart_clk;
-endinterface:uart_intrf
+`ifndef __ENV_TYPES_SV
+`define __ENV_TYPES_SV
+
+// Agent operating modes used across the environment
+typedef enum logic [0:0] {
+  PASSIVE, //do nothing / monitor the DUT
+  ACTIVE   //affects the DUT in some way
+} agent_mode_e;
+
+
+`endif

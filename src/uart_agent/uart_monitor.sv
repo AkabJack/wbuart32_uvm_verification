@@ -1,23 +1,26 @@
 //------------------------------------------------------------------------------
 // Project         : wbuart_uvm_verification
-// Module          : uart_intrf.sv
+// Module          : uart_monitor.sv
 // Autor           : Nistor Ciprian Alexandru
-// Data            : 23.11.2025
+// Data            : 06.12.2025
 //------------------------------------------------------------------------------
-// Description     : Interface for the uart interface
+// Description     : Uart monitor for reading the uart lines
 //------------------------------------------------------------------------------
 // Changes         :
-// 23.11.2025 (NCA): Initial commit
+// 06.12.2025 (NCA): Initial commit
 //------------------------------------------------------------------------------
-`default_nettype wire
 
-interface uart_intrf(
-    input logic clk, 
-    input logic rst_p
-);
-    logic rx;
-    logic tx;
-    logic cts;
-    logic rts;
-    logic uart_clk;
-endinterface:uart_intrf
+`ifndef __UART_MONITOR_SV
+`define __UART_MONITOR_SV
+
+import uvm_pkg::*;
+`include "uvm_macros.svh"
+
+class uart_monitor extends uvm_monitor;
+
+    virtual uart_intrf v_intrf;
+    protected uart_transfer transaction;
+    //add coverage class
+
+endclass:uart_monitor
+`endif

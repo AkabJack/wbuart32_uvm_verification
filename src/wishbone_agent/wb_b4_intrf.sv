@@ -2,12 +2,12 @@
 // Project         : wbuart_uvm_verification
 // Module          : bw_b4_intrf.sv
 // Autor           : Nistor Ciprian Alexandru
-// Data            : 23.11.2024
+// Data            : 23.11.2025
 //------------------------------------------------------------------------------
 // Description     : Interface for the Wishbone B4
 //------------------------------------------------------------------------------
 // Changes         :
-// 23.11.2024 (NCA): Initial commit
+// 23.11.2025 (NCA): Initial commit
 //------------------------------------------------------------------------------
 
 interface wb_b4_intrf #(
@@ -17,7 +17,7 @@ interface wb_b4_intrf #(
     parameter DATA_OUTPUT_WIDTH = 32
 ) (
     input clk, 
-    input rst_n
+    input rst_p
 );
     logic                          cyc;
     logic                          stb;

@@ -2,3 +2,10 @@
 sim/obj_dir/
 sim/V*
 sim/*.vcd
+sim/xsim.dir
+sim/.Xil
+sim/xelab* 
+sim/xsim* 
+sim/xvlog* 
+sim/*.wdb 
+sim/*.log
